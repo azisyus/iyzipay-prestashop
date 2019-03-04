@@ -374,8 +374,9 @@ class Iyzipay extends PaymentModule
     public function hookPaymentOptions($params)
     {
 
-        if(!$params['cart']->id_carrier)
-            return $this->paymentOptionResult();
+        //commented according to mystic mail
+    #    if(!$params['cart']->id_carrier)
+    #        return $this->paymentOptionResult();
 
         $iyzicoCheckoutFormResponse = $this->checkoutFormGenerate($params);
 
